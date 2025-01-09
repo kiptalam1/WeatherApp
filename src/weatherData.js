@@ -14,7 +14,7 @@ export async function getWeatherData(loc) {
         const precipitation = data.currentConditions.precip;
         const datetime = data.currentConditions.datetime;
 
-        return { condition, datetime, humidity, temp, precip, icon };
+        return { datetime, condition, temp, humidity, precipitation, icon };
     } catch (err) {
         console.log(err);
     }

@@ -11,8 +11,8 @@ form.addEventListener('submit', (event) => {
     const location = getLocation();
 
     if (location) {
-        getWeatherData(location);
+        //getWeatherData(location);
+        renderDom(location);
+
     }
 });
-
-renderDom();
