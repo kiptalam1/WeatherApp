@@ -1,5 +1,5 @@
 // get location info from user input.
-const button = document.getElementById('formButton');
+// const button = document.getElementById('formButton');
 
 
 export function getLocation() {

@@ -8,7 +8,7 @@ function getWeatherEmoji(icon) {
         "rain": "🌧",
         "cloudy": "☁️",
         "partly cloudy day": "⛅",
-        "partly cloudy night": "🌙",
+        "partly cloudy night": "🌙☁️",
         "clear day": "☀️",
         "clear night": "🌌",
         "snow": "❄️",
@@ -35,15 +35,14 @@ export async function renderDom(location) {
     try {
         const weatherData = await getWeatherData(location);
         if (!weatherData) throw new Error("No weather data received");
-        console.log("Weather API Response:", weatherData);
         
         const { datetime, condition, temp, humidity, precipitation, icon } = weatherData;
 
         document.querySelector('.datetime').textContent = datetime;
         document.querySelector('.condition').textContent = condition;
-        document.querySelector('.temp').textContent = temp;
-        document.querySelector('.humidity').textContent = humidity;
-        document.querySelector('.precipitation').textContent = precipitation;
+        document.querySelector('.temp').textContent = `${temp}°F`;
+        document.querySelector('.humidity').textContent = `${humidity}%`;
+        document.querySelector('.precipitation').textContent = `${precipitation}mm`;
         document.querySelector('.icon').textContent = getWeatherEmoji(icon);
     } catch (error) {
         console.log("Failed to render weather data:", error);

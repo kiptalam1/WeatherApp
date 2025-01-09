@@ -1,5 +1,5 @@
 import "./styles.css";
-import { getWeatherData } from './weatherData.js';
+// import { getWeatherData } from './weatherData.js';
 import { getLocation } from './formInput.js';
 import { renderDom } from './dom.js';
 
@@ -11,9 +11,9 @@ form.addEventListener('submit', (event) => {
     const location = getLocation();
 
     if (location) {
-        //getWeatherData(location);
         renderDom(location);
-
+        // Clear input field
+        document.getElementById('location').value = ""; 
     }
 });
 
