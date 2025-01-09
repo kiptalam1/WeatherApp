@@ -15,32 +15,73 @@ body{
     justify-content: center; */
 }
 h1{
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-align: center;
     color: var(--black-color);
+    margin: 50px 0;
 }
 .form{
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     margin: 10px auto;
     width: 600px;
     max-width: 800px;
+}
+.form label{
+    margin-right: 20px;
+}
+.form input{
+    margin-right: 20px;
+    font-size: 1rem;
+    padding: 10px;
+    width: 350px;
+    outline: none;
+    border-radius: 10px;
+}
+.form button{
+    width: 60px;
+    cursor: pointer;
+    padding: 11px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: none;
+}
+button:hover{
+    opacity: .5;
+}
+.weather-headers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    gap: 10px;
+    margin: 10px auto;
+}
+.weather-headers div{
+    width: 250px;
+    font-size: 1.1rem;
+    text-align: center;
+    /* border: 1px solid yellow; */
+
 }
 .weather-data{
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1000px;
+    width: 1200px;
     gap: 10px;
     margin: 10px auto;
     border: 1px solid blue;
 
 }
 .weather-data div{
-    width: 200px;
+    width: 250px;
     height: 50px;
+    border-radius: 10px;
     border: 1px solid black;
-    font-size: .9rem;
+    font-size: 1rem;
     color: black;
+    text-align: center;
+    line-height: 50px;
 }
 
 .loading {
@@ -68,4 +109,11 @@ h1{
     to {
         transform: rotate(360deg);
     }
+}
+.locality{
+    text-align: center;
+    height: 40px;
+    font-size: 1rem;
+    color: rgba(19, 19, 229, 0.807);
+    margin: 10px 0;
 }
